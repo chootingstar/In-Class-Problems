@@ -10,7 +10,7 @@ public class Age {
     String drunk = "old enough to drink alcohol";
     String jfk = "old enough to run for President of the U.S.";
     String mood = "(cool)";
-    System.out.println("How old are you?");
+    System.out.println("Please type your age then hit enter/return:");
    
     int c = a.nextInt();
     
