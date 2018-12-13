@@ -8,7 +8,7 @@ public class Age {
    
     String punk = "old enough to get a tattoo";
     String drunk = "old enough to drink alcohol";
-    String JFK = "old enough to run for President of the U.S.";
+    String jfk = "old enough to run for President of the U.S.";
     String mood = "(cool)";
     System.out.println("How old are you?");
    
@@ -25,7 +25,7 @@ public class Age {
     }
     
     if (c < 33){
-        JFK = "too young to run for President of the U.S.";
+        jfk = "too young to run for President of the U.S.";
         b++;
     }
     
@@ -43,7 +43,7 @@ public class Age {
     System.out.println("");
     System.out.println("    " + drunk);
     System.out.println("");
-    System.out.println("    " + JFK);
+    System.out.println("    " + jfk);
     System.out.println("");
     System.out.println("        " + mood);
   }
