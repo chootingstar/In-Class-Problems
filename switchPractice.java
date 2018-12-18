@@ -2,14 +2,17 @@ import java.util.Scanner;
 public class SwitchPractice {
 
 	public static void main(String args[]) {
+		String a = answer(int);
+		System.out.println(a);
 
 	}
 	
 	
-	public int answer(int a) {
+	public int answer(Class<Integer> class1) {
 		Scanner inPut = new Scanner(System.in);
-		int outPut = inPut.nextInt();
-		switch (outPut) {
+		int inputter = inPut.nextInt();
+		int outPut = 0;
+		switch (inputter) {
 		case 1:
 			outPut+=4;
 			break;
