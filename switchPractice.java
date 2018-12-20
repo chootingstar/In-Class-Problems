@@ -2,13 +2,18 @@ import java.util.Scanner;
 public class SwitchPractice {
 
 	public static void main(String args[]) {
-		String a = answer(int);
-		System.out.println(a);
+		answer(null);
+		//int a = answer(null);
+		//I don't understand why I needed this to be null, but it really works.
+		//it also makes sense that 'a' would be an int data type. Why did I make it String anyway?
+		//System.out.println(a);
+		//Apparently I don't need the sysout here, it already gets printed, I don't want it printed twice.
+		//I do not even need int a =
 
 	}
 	
 	
-	public int answer(Class<Integer> class1) {
+	public static int answer(Class<Integer> class1) {
 		Scanner inPut = new Scanner(System.in);
 		int inputter = inPut.nextInt();
 		int outPut = 0;
@@ -49,5 +54,6 @@ public class SwitchPractice {
 		
 		System.out.println(outPut);
 		return outPut;
+		//I don't think I need return outPut; but I'm keeping it
 	}
 }
