@@ -7,7 +7,8 @@ public class TestCircle {
 		System.out.println(c1.getRadius());
 		System.out.println(c1.getArea());
 		System.out.println("and");
-		System.out.println(c2.getArea());
 		System.out.println(c2.getRadius());
+		System.out.println(c2.getArea());
+		
 	}
 }
