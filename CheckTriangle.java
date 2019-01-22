@@ -17,7 +17,7 @@ public class CheckTriangle {
 		int triAng = (a + b + c);
 		
 		if (triAng != 180) {
-			System.out.println("That isn't a triagle");
+			System.out.println("That does not add up to 180. It isn't a triagle");
 		} else {
 			i.angleCheck(a, b, c);
 			e.angleCheck(a, b, c);
