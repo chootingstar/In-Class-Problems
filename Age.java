@@ -13,6 +13,7 @@ public class Age {
     System.out.println("Please type your age then hit enter/return:");
    
     int c = a.nextInt();
+    a.close();
     
     if (c < 18){
         punk = "too young to get a tattoo";

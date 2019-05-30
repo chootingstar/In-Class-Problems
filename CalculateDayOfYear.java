@@ -17,6 +17,7 @@ public class CalculateDayOfYear {
 		
 		String sD;
 		int mod = doy%10; //This works to find the last digit because the remainder of the number is always the last digit.
+		//Learned that from an answer to a question Similar to mine
 		switch(mod) {
 		case 1:
 		sD = "st";
@@ -35,53 +36,16 @@ public class CalculateDayOfYear {
 	}
 	
 	public static int dayOfYear(int month, int dayOfMonth, int year) {
-		if (month == 2) {
-
-			dayOfMonth += 31;
-
-		} else if (month == 3) {
-
-			dayOfMonth += 59;
-
-		} else if (month == 4) {
-
-			dayOfMonth += 90;
-
-		} else if (month == 5) {
-
-			dayOfMonth += 31 + 28 + 31 + 30;
-
-		} else if (month == 6) {
-
-			dayOfMonth += 31 + 28 + 31 + 30 + 31;
-
-		} else if (month == 7) {
-
-			dayOfMonth += 31 + 28 + 31 + 30 + 31 + 30;
-
-		} else if (month == 8) {
-
-			dayOfMonth += 31 + 28 + 31 + 30 + 31 + 30 + 31;
-
-		} else if (month == 9) {
-
-			dayOfMonth += 31 + 28 + 31 + 30 + 31 + 30 + 31 + 31;
-
-		} else if (month == 10) {
-
-			dayOfMonth += 31 + 28 + 31 + 30 + 31 + 30 + 31 + 31 + 30;
-
-		} else if (month == 11) {
-
-			dayOfMonth += 31 + 28 + 31 + 30 + 31 + 30 + 31 + 31 + 30 + 31;
-
-		} else if (month == 12) {
-
-			dayOfMonth += 31 + 28 + 31 + 30 + 31 + 30 + 31 + 31 + 30 + 31 + 31;
-
+		int[] months = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30};
+		
+		for(int m = 0; m < month-1; m++) {
+//			System.out.print(dayOfMonth + " ");
+			dayOfMonth += months[m];
+//			System.out.print(dayOfMonth + " ");
+			//Needed some sysouts to tell me what was happening with the math
 		}
 		if(year%4 == 0) {
-			if(month >= 2) dayOfMonth += 1;
+			if(month >= 2) dayOfMonth += 1;//For leap years of course. Thankfully all of those years are divisable by 4
 		}
 
 		return dayOfMonth;
