@@ -26,22 +26,33 @@ public class BubbleSort {
 			swapp = false;
 			int lef = 0;
 		    int righ = 1;
-				for(i = len - lastIndex;i >=0; i--) {
+		    //Previously the for loop was working from the last to the first, which the if statement logic
+		    //was not equip to handle
+				for(i = 0; i < len - lastIndex; i++) {
 				        if(array[lef] > array[righ]) {
 				            int temp = array[righ];
 				            array[righ] = array[lef];
 				            array[lef] = temp;
+				           // System.out.println(temp);
 				            swapp = true;
+				        //I left the lef and righ counters on the inside of the if statement.
+				        //making it impossible to continue without the statement being true.
+				        }
 				        lef += 1;
 				        righ += 1;
-				        }
+				        //System.out.print(array[lef] + ", ");
 				}
+				//System.out.println("----");
 			
 		}
 		
 		System.out.println("Done! Your sorted list of numbers is:");
-		for(len = len - 1; len>0; len--) {
-			System.out.print(array[len] + ", ");
+		//I had this for loop backwards too. I ended up with the correct answer backwards
+		//When I realized this, I fixed it quickly and later realized my mistake above
+		//This lead to me copying this for loop condition and modifying it to suit the needs
+		//of the bubble logic
+		for(i = 0; i < len; i++) {
+			System.out.print(array[i] + ", ");
 		}
 		
 	}
