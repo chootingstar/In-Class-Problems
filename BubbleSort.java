@@ -1,19 +1,23 @@
 import java.util.Scanner;
 public class BubbleSort {
 	public static void main(String args[]) {
+		Scanner scan = new Scanner(System.in);
+
 		int[] array = new int[30];
 		
 		boolean swapp = true;
 		System.out.println("Enter the number of numbers you are sorting up to 30");
-		int loop = scaning();
+		int loop = scan.nextInt();
+		int len = loop;
 		
 		System.out.println("Enter the numbers");
 		int i = 0;
 		while(loop > 0) {
-			array[i] = scaning();
+			array[i] = scan.nextInt();
 			loop--;
 			i++;
 		}
+		scan.close();
 		
 		System.out.println("Sorting...");
 		int lastIndex = 0;
@@ -22,7 +26,7 @@ public class BubbleSort {
 			swapp = false;
 			int lef = 0;
 		    int righ = 1;
-				for(i = array.length - lastIndex;;) {
+				for(i = len - lastIndex;i >=0; i--) {
 				        if(array[lef] > array[righ]) {
 				            int temp = array[righ];
 				            array[righ] = array[lef];
@@ -35,11 +39,12 @@ public class BubbleSort {
 			
 		}
 		
-		System.out.println("Done! Your sorted list of numbers is:\n" + array);
+		System.out.println("Done! Your sorted list of numbers is:");
+		for(len = len - 1; len>0; len--) {
+			System.out.print(array[len] + ", ");
+		}
+		
 	}
 	
-	static int scaning() {
-		Scanner scan = new Scanner(System.in);
-		return scan.nextInt();
-	}
+
 }
